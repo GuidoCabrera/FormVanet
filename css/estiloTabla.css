@@ -1,0 +1,255 @@
+/* .estilo-tabla {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.estilo-tabla thead tr {
+    background-color: rgb(2, 143, 143);
+    color: #ffffff;
+    text-align: left;
+}
+
+.estilo-tabla th,
+.estilo-tabla td {
+    padding: 12px 15px;
+}
+
+.estilo-tabla tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.estilo-tabla tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.estilo-tabla tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(2, 143, 143);;
+}
+
+.estilo-tabla tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+#tabla-clientes{
+     margin: 0 auto;
+} */
+
+:root{
+    --color-primario: #fff;
+    --color-secundario: rgb(60, 67, 71);
+    --color-seleccionado: #3081b8;
+
+    --color-background-container: #283035;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background: var(--color-background-container);
+}
+
+.border{
+    border: 1px solid red;
+}
+
+#tools li i{
+    font-size: 18px;
+}
+
+#containerDataTable{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--color-background-container);
+    color: var(--color-primario);
+    display: table;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#headerTools{
+    border-bottom: 1px solid var(--color-secundario);
+    padding: 12px;
+    display: flex;
+    align-items: baseline;
+}
+
+#headerTools #search{
+    width:15%;
+}
+
+#headerTools #search #inputGroup{
+    position: relative;
+}
+
+#headerTools #search #inputGroup i{
+    position: absolute;
+    padding-top: 5px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    left: 3px; 
+    height: 25px;
+    width: 30px;
+    border-right: 1px solid var(--color-background-container);
+}
+
+#headerTools #search #searchInput {
+    width: 90%;
+    height: 30px;
+    background-color: var(--color-secundario);
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px var(--color-secundario);
+    color: var(--color-primario);
+    padding-left: 37px;
+}
+
+#headerTools #search #searchInput{
+    outline: var(--color-secundario);
+}
+
+#headerTools #tools{
+    width: 85%;
+}
+
+#headerTools #tools ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+#headerTools #tools li{
+    list-style: none;
+}
+
+#footerTools{
+    padding: 12px;
+    display: flex;
+    align-items: baseline;
+}
+
+#footerTools #listItems{
+   width: 50%;
+}
+
+#footerTools #pages{
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+}
+
+#footerTools #pages ul{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+#footerTools #pages ul li{
+    display: inline-block;
+    margin: 0 2px;
+}
+
+#footerTools #pages a , #headerTools #tools button {
+    color: var(--color-primario);
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+#footerTools #pages a,#footerTools #pages a:link,#footerTools #pages a:visited,#footerTools #pages a:active{
+    text-decoration: none;
+}
+
+#footerTools select{
+	font-size: 1em;
+	color: #fff;
+    border-radius: 5px;
+    background: transparent;
+}
+
+#footerTools select option{
+	font-size: 1em;
+	color: #fff;
+    background: var(--color-background-container);
+}
+
+#footerTools select:focus{
+     outline: none;
+}
+
+#footerTools #pages a:hover , #headerTools #tools button:hover {
+   color: var(--color-primario);
+   background: var(--color-seleccionado);
+}
+
+#footerTools #pages ul li a.active {
+    border-radius: 4px;
+    background-color: var(--color-seleccionado);
+ }
+
+ #footerTools #pages a , #headerTools #tools button  {
+    padding: 6px 12px;
+ }
+
+ #containerDataTable #dataTable{
+     border-collapse:  collapse;
+     width: 100%
+ }
+
+ #containerDataTable #dataTable, #containerDataTable #dataTable th, #containerDataTable #dataTable td{
+     padding: 12px 12px;
+ }
+
+ #containerDataTable #dataTable th{
+     font-weight: bolder;
+     text-align: left;
+     border-bottom: 1px solid var(--color-secundario);
+ }
+
+ #containerDataTable #dataTable td{
+    border-bottom: 1px solid var(--color-secundario);
+}
+
+#containerDataTable #dataTable tbody tr:nth-child(even){
+    background-color: var(--color-secundario);
+}
+
+#containerDataTable #dataTable tbody tr:hover{
+    background-color: var(--color-seleccionado);
+}
+
+@media(max-width:1100px) and (min-width:1000px) { 
+     #headerTools #search{
+        width: 20%;
+    }
+}
+
+@media(max-width:999px) and (min-width:700px) {   
+    #headerTools #search{
+        width: 25%;
+    }
+}
+
+@media(max-width:699px) and (min-width:500px) {  
+  #headerTools #search{
+    width: 35%;
+}
+}
+
+@media(max-width:499px){
+    #headerTools #search{
+        width: 45%;
+    }
+}
