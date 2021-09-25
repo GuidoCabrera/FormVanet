@@ -1,5 +1,3 @@
-
-    
      <tbody>
     <tr id="trTable<?php echo $client2->getId(); ?>">
     <td><input type="checkbox" name="Check<?php echo $client2->getId(); ?>" data-Id="<?php $client2->getId();?>" ></td>

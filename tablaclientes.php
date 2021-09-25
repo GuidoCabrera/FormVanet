@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://localhost/PHP/formVanet/css/styles.css">
-    <link rel="stylesheet" href="http://localhost/PHP/formVanet/css/EstiloTabla.css">
+<link rel="stylesheet" href="<?php echo constant('URL')?>css/styles.css">
+<link rel="stylesheet" href="<?php echo constant('URL')?>css/EstiloTabla.css">
     <title>Tabla Vanet</title>
 </head>
 <body>
@@ -83,7 +83,7 @@
 
 </div>
 
-<script src="js/jquery-3.6.0.min.js"></script>
- <script src="js/table.js"></script>
+<script src="<?php echo constant('URL')?>js/jquery-3.6.0.min.js"></script>
+ <script src="<?php echo constant('URL')?>js/table.js"></script>
 </body>
 </html>

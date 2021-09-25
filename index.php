@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanet</title>
-    <link rel="stylesheet" href="http://localhost/PHP/formVanet/css/styles.css">
-    <link rel="stylesheet" href="http://localhost/PHP/formVanet/css/estiloVanet.css">
+    <?php include_once 'config.php' ?>
+    <link rel="stylesheet" href="<?php echo constant('URL')?>css/styles.css">
+    <link rel="stylesheet" href="<?php echo constant('URL')?>css/estiloVanet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -83,7 +84,7 @@
     </form>
     </div>
 
- <script src="js/jquery-3.6.0.min.js"></script>
- <script src="js/restricForm.js"></script>
+  <script src="<?php echo constant('URL')?>js/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo constant('URL')?>js/restricForm.js"></script>
 </body>
 </html>

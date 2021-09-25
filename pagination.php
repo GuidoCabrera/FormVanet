@@ -35,13 +35,9 @@ Class Pagination extends Database{
                     $this->paginaActual = $_GET['pagina'];
                     $this->indice = ($this->paginaActual-1) * $this->resultadosPorPagina;
                 }
-                else{
-                    echo "pagina inexistente";
-                }
+                else{ echo "pagina inexistente"; }
             }
-            else{
-                echo "error al mostrar pagina";
-            }
+            else{ echo "error al mostrar pagina"; }
         }     
     }
 
@@ -63,38 +59,27 @@ Class Pagination extends Database{
 
         echo "<ul>";
 
-        if($this->totalPaginas<=6){
+       if($this->totalPaginas<=6){
         for($i=0;$i<$this->totalPaginas;$i++){
           if(($i+1)==$this->paginaActual){
               $active = 'class="active"';
           }
-          else{
-              $active= '';
-          }
+          else{ $active= ''; }
           echo '<li><a ' .$active . 'href="?pagina='. ($i + 1). '">'. ($i + 1) . '</a></li>';
         }
-    }
-     
-      else{
-         
-        if($this->paginaActual==1){
-            echo '<li><a href="#">Anterior</a></li>';
-        }
-        else{
-            echo '<li><a href="?pagina='.($this->paginaActual-1).'">Anterior</a></li>';
+       } 
+       else{     
+        if($this->paginaActual==1){ echo '<li><a href="#">Anterior</a></li>'; }
+        else{ 
+        echo '<li><a href="?pagina='.($this->paginaActual-1).'">Anterior</a></li>'; 
         }
         echo '<li><a class="active" href="#">'. $this->paginaActual . '</a></li>';
         if($this->paginaActual>=$this->totalPaginas){
             echo '<li><a href="?pagina=1">Siguiente</a></li>';
           }
-        else{
-        echo '<li><a href="?pagina='.($this->paginaActual+1).'">Siguiente</a></li>';
-        }
+        else{ echo '<li><a href="?pagina='.($this->paginaActual+1).'">Siguiente</a></li>'; }
       }
-
-        echo "</ul>";
+      echo "</ul>";
     }
-
 }
-
 ?>
