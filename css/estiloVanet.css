@@ -66,11 +66,7 @@ body{
     position: relative;
     top: 3px;
 }
-/* #line{
-    width: 90%;
-    margin: 0 auto;
-    border-bottom: 2px solid #6A7B80;
-} */
+
 #box{
 font-family: 'Roboto Condensed', sans-serif;
 color: #ffffff;

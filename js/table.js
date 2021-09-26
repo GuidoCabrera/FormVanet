@@ -11,10 +11,6 @@ var clientes = [[],[]];
         });
 
       const selected = (e) =>{
-            // for(var i=0;i<clientes[1].length;i++){
-            //       console.log(clientes[0][i]);
-            //       console.log(clientes[1][i]);
-            // }
             if(e.target.checked){
                   var nombre = document.getElementById("tdNom"+e.target.dataset.id);
                   var surname = document.getElementById("tdApe"+e.target.dataset.id);
@@ -49,7 +45,6 @@ var clientes = [[],[]];
             txtClient+=clientes[0][i]; 
       }
       }
-      
 
       if(txtClient!==""){
       const confirm = window.confirm("Desea eliminar a"+txtClient+"?");
@@ -59,7 +54,7 @@ var clientes = [[],[]];
 
             $.ajax({
                type: 'POST',
-               url: 'http://localhost/PHP/FormVanet/deleteClient',
+               url: 'http://192.168.2.103/PHP/FormVanet/deleteClient',
                data: { tuArrJson: valParam},
                success: function(resp){
                   $("#respa").html(resp);

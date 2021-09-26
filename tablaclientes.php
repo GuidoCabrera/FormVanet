@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet"> -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
+<?php include_once 'config.php' ?>
 <link rel="stylesheet" href="<?php echo constant('URL')?>css/styles.css">
 <link rel="stylesheet" href="<?php echo constant('URL')?>css/EstiloTabla.css">
     <title>Tabla Vanet</title>

@@ -15,5 +15,5 @@ if(!empty($_POST['name'])&&!empty($_POST['surname'])&&!empty($_POST['direction']
     $stmt->execute();
 }
 require 'index.php';
-header('Location:'constant('URL'));
+header('Location:'.constant('URL'));
 ?>

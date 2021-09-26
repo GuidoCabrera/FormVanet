@@ -22,8 +22,6 @@
 	email: false
   }
 
-//   alert(Object.keys(campos));
-
   const validation = (e) => {
 	  switch(e.target.name){
           case "name": 
@@ -80,7 +78,7 @@ btn.addEventListener("click", (e) => {
 			form.submit();
 		   },3000); 
    
-}
+    }
 	else{
        for(var i=0;i<array.length;i++){
 		   if(campos[array[i]]==false){
@@ -106,6 +104,5 @@ btn.addEventListener("click", (e) => {
 		   }
 		   txt.innerHTML = "Hay campos sin completar correctamente";
 	   }
-
 	})
 
