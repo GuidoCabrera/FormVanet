@@ -62,8 +62,7 @@ var clientes = [[],[]];
               error: function () {
                   alert("error");
               }
-            });
-            
+            }); 
         }
       }
 

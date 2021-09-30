@@ -26,11 +26,7 @@
            <a href="https://wa.me/541139008706/" target="_blank"><i class="icon-whatsapp"></i> 1139008706</a>
     </div>
 
-   
-
     </div>
-
-    <!-- <div id="line"></div> -->
 
     <div id="box">
         Unicamente complete este formulario en caso de querer modificar algun dato ya establecido

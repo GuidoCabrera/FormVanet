@@ -7,8 +7,9 @@
 }
 
 body{
-    margin:0;
-    padding:0;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
     background: var(--color-background-container);
 }
 
@@ -24,9 +25,10 @@ body{
     font-family: 'Ubuntu', sans-serif;
     background-color: var(--color-background-container);
     color: var(--color-primario);
-    display: table;
     border-radius: 5px;
+    display: table;
     width: 100%;
+    margin: 0 auto;
 }
 
 #headerTools{
@@ -50,7 +52,7 @@ body{
     padding-left: 5px;
     box-sizing: border-box;
     left: 3px; 
-    height: 25px;
+    height: 30px;
     width: 30px;
     border-right: 1px solid var(--color-background-container);
 }
@@ -162,16 +164,16 @@ body{
     padding: 6px 12px;
  }
 
- #containerDataTable #dataTable{
-     border-collapse:  collapse;
-     width: 100%
+  #dataTable{
+    border-collapse: collapse;
+    width: 100%;
  }
 
- #containerDataTable #dataTable, #containerDataTable #dataTable th, #containerDataTable #dataTable td{
-     padding: 12px 12px;
- }
+  #containerDataTable #dataTable th, #containerDataTable #dataTable td{
+     padding: 12px;
+ } 
 
- #containerDataTable #dataTable th{
+  #containerDataTable #dataTable th{
      font-weight: bolder;
      text-align: left;
      border-bottom: 1px solid var(--color-secundario);
@@ -187,28 +189,108 @@ body{
 
 #containerDataTable #dataTable tbody tr:hover{
     background-color: var(--color-seleccionado);
-}
+}  
 
-@media(max-width:1100px) and (min-width:1000px) { 
-     #headerTools #search{
-        width: 20%;
-    }
-}
-
-@media(max-width:999px) and (min-width:700px) {   
+@media screen and (max-width: 600px){
     #headerTools #search{
-        width: 25%;
+        width: 40%;
     }
-}
+    thead{
+      display: none;
+    }
+  
+    td{
+      display: block;
+    }
 
-@media(max-width:699px) and (min-width:500px) {  
-  #headerTools #search{
-    width: 35%;
-}
-}
+    #containerDataTable #dataTable tbody tr:nth-child(even) td:nth-child(n+3){
+        border: 1px solid var(--color-background-container);
+    } 
 
-@media(max-width:499px){
-    #headerTools #search{
+    #containerDataTable #dataTable tbody tr:nth-child(even) td:nth-child(3){
+        border-top: none;
+    } 
+    
+    #containerDataTable #dataTable td:first-child{
+        display: inline-block;
+        margin-right: -18px;
         width: 45%;
+        border-bottom: none;
+    }
+
+    #containerDataTable #dataTable td:nth-child(2){
+      text-align: left;
+      display: inline-block;
+      width:45%;
+      border-bottom: none;
+      font-size: 18px;
+      font-family: 'Montserrat', sans-serif;
+    }
+  
+    td:nth-child(3)::before{
+      content: "Apellido";
+    }
+  
+    td:nth-child(4)::before{
+      content: "Direccion";
+    }
+  
+    td:nth-child(5)::before{
+      content: "Localidad";
+    }
+
+    td:nth-child(6)::before{
+        content: "Numero telefonico";
+      }
+
+    td:nth-child(7)::before{
+        content: "Email";
+    }
+  
+    td{
+      text-align: right;
+    }
+  
+    td::before{
+      float: left;
+      margin-right: 3rem;
+      font-weight: bold;
+    }
+    #footerTools{
+        height: 30px;
+    }
+    #footerTools #pages ul li{
+       position: relative;
+       top: 5px;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    #headerTools #search{
+        width: 70%;
+        position: relative;
+        left: 20px;
+        bottom: 5px;
+    }
+    #footerTools{
+        height: 30px;
+    }
+    #footerTools #pages ul li{
+       position: relative;
+       top: 5px;
+    }
+    #containerDataTable #dataTable input[type="checkbox"]{
+        width: 1.3em;
+        height: 1.3em;
+        background-color: var(--color-background-container);
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+    }
+    #containerDataTable #dataTable input[type="checkbox"]:checked{
+        background-color: #ddd;
     }
 }
