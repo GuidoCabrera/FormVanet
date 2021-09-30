@@ -66,19 +66,13 @@ body{
     position: relative;
     top: 3px;
 }
-/* #line{
-    width: 90%;
-    margin: 0 auto;
-    border-bottom: 2px solid #6A7B80;
-} */
+
 #box{
 font-family: 'Roboto Condensed', sans-serif;
 color: #ffffff;
 font-weight: 500;
 font-size: 19px;
 text-align: center;
-/* background: #7e91c2; */
-/* background: rgb(2, 143, 143); */
 background: linear-gradient(-45deg,#EE7752,#E73CE7,#23A6D5,#23D5AB);
 background-size: 400% 400%;
 animation: change 10s ease-in-out infinite;
@@ -114,7 +108,6 @@ border: 2px solid rgb(70, 55, 55);
 }
 form #inputGroup .input-box{
      margin-bottom: 15px;
-     /* border: 2px solid red; */
      width: calc(100% / 2 - 20px);
  }
 form .input-box span.details{
@@ -146,7 +139,7 @@ form .input-box span.details{
 }
 #boxBtn{
     width: 80%;
-    margin: 15px auto; 
+    margin: 13px auto; 
     text-align: center;
     height: 45px;
 }
@@ -256,270 +249,8 @@ form .input-box span.details{
 }
 }
 
-/* @media(max-width:960px) and (min-width:905px){
-    #txt-surname,#txt-location,#txt-email{left: 520px;}
-}
-
-@media(max-width:904px) and (min-width:1px) { 
-    .boxInput{
-        height: 140px;
-        margin: 0 auto;
-    }
-    .boxInput input{
-        width: 70%;
-        margin: 0 auto;
-        display: flex;
-        margin-bottom: 35px;
-    }
-    .boxInput input:focus{
-        width: 80%;
-        margin-bottom: 30px;
-    }
-    #txt-surname,#txt-location,#txt-email{left: 230px;}
-
-    #txt-name{
-        top: 273px;
-    }
-    #txt-surname{
-        top: 344px;
-    }
-    #txt-direction{
-        top: 413px;
-    }
-    #txt-location{
-        top: 483px;
-    }
-    #txt-phone{
-        top: 553px;
-    }
-    #txt-email{
-        top: 625px;
-    }
+@media(max-width:426px) {
     #boxBtn{
-        margin-top: 10px;
-    }
-}
-
-@media(max-width:712px) and (min-width:564px) { 
-    #box{
-        width: 65%;
-        margin-left: 20px;
-    }
-    .boxInput input{
-        width: 80%;
-    }
-    .boxInput input:focus{
-        width: 90%;
-    }
-    #txt-name,#txt-direction,#txt-phone,#txt-surname,#txt-location,#txt-email{left: 150px;}
-
-    #txt-name{
-        top: 293px;
-    }
-    #txt-surname{
-        top: 363px;
-    }
-    #txt-direction{
-        top: 432px;
-    }
-    #txt-location{
-        top: 503px;
-    }
-    #txt-phone{
-        top: 571px;
-    }
-    #txt-email{
-        top: 645px;
-    }
-}
-
-@media(max-width:563px) and (min-width:476px){
-    #box{
-        width: 75%;
-        margin-left: 20px;
-    }
-    .boxInput input{
-        width: 85%;
-    }
-    .boxInput input:focus{
-        width: 95%;
-    }
-    #txt-name,#txt-direction,#txt-phone,#txt-surname,#txt-location,#txt-email{left: 100px;}
-
-    #txt-name{
-        top: 293px;
-    }
-    #txt-surname{
-        top: 363px;
-    }
-    #txt-direction{
-        top: 432px;
-    }
-    #txt-location{
-        top: 503px;
-    }
-    #txt-phone{
-        top: 571px;
-    }
-    #txt-email{
-        top: 645px;
-    }
-    #boxBtn button{
-        margin-right:0px;
-    }
-} 
-
-@media(max-width:475px) and (min-width:428px) {
-    #box{
-        width: 75%;
-        font-weight: 400;
-        margin-left: 15px;
-        padding: 15px;
-    }
-    .img{
-        height: 35px;
-        width: 150px;
-        margin-left: 15px;
-    }
-    #containerEnlac{
-        margin-right: 5px;
-    }
-    #containerEnlac a{
-        font-size: 17px;
-        margin-top: 5px;
-    }
-    .boxInput input{
-        width: 88%;
-        font-size: 13px;
-    }
-    .boxInput input:focus{
-        width: 95%;
-        font-size: 16px;
-    }
-    #txt-name,#txt-direction,#txt-phone,#txt-surname,#txt-location,#txt-email{left: 70px;}
-
-    #txt-name{
-        top: 300px;
-    }
-    #txt-surname{
-        top: 371px;
-    }
-    #txt-direction{
-        top: 440px;
-    }
-    #txt-location{
-        top: 512px;
-    }
-    #txt-phone{
-        top: 579px;
-    }
-    #txt-email{
-        top: 651px;
-    }
-    #boxBtn button{
-        margin-right: 0px;
-        width: 250px;
-        height: 30px;
-    }
-    .visible{
-        font-size: 13px;
-    }
-}
-
-
-@media(max-width:427px) and (min-width:280px) {
-    #box{
-        width: 220px;
         height: auto;
-        padding: 10px;
-        font-size: 14px;
-        margin-left: 5px;
-        margin-top: 50px;
     }
-    .img{
-        margin-left: 5px;
-    }
-    #containerEnlac{
-        top: 0px;
-        float: left;
-        text-align: left;
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-    #containerEnlac a{
-        font-size: 16px;
-        margin-top: 5px;
-    }
-      a i{
-        font-size: 20px;
-    }
-      #line{
-          position: relative;
-          top: 40px;
-    }
-      .boxInput input{
-        width: 88%;
-        font-size: 12px;
-    }
-
-    .boxInput input:focus{
-        width: 95%;
-        font-size: 14px;
-    }
-    #boxBtn button{
-        width: 190px;
-        height: 35px;
-        margin-left: 20px;
-        font-size: 15px;
-        font-weight: 500;
-    }
-    #txt-name,#txt-direction,#txt-phone,#txt-surname,#txt-location,#txt-email{left:50px;}
-
-    #txt-name{
-        top: 285px;
-    }
-    #txt-surname{
-        top: 356px;
-    }
-    #txt-direction{
-        top: 425px;
-    }
-    #txt-location{
-        top: 495px;
-    }
-    #txt-phone{
-        top: 565px;
-    }
-    #txt-email{
-        top: 636px;
-    }
-}
-
-@media(max-width:369px) and (min-width:280px) {
-    .boxInput p{      
-        font-size: 11px;      
-      }
-      .boxInput input{
-        font-size: 12px;
-    }
-      #txt-name,#txt-direction,#txt-phone,#txt-surname,#txt-location,#txt-email{left:30px;}
-
-      #txt-name{
-        top: 288px;
-    }
-    #txt-surname{
-        top: 360px;
-    }
-    #txt-direction{
-        top: 428px;
-    }
-    #txt-location{
-        top: 499px;
-    }
-    #txt-phone{
-        top: 568px;
-    }
-    #txt-email{
-        top: 639px;
-    }
-} */
+ }

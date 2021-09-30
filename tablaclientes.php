@@ -8,9 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet"> -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="http://localhost/PHP/formVanet/css/styles.css">
-    <link rel="stylesheet" href="http://localhost/PHP/formVanet/css/EstiloTabla.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<?php include_once 'config.php' ?>
+<link rel="stylesheet" href="<?php echo constant('URL')?>css/styles.css">
+<link rel="stylesheet" href="<?php echo constant('URL')?>css/EstiloTabla.css">
     <title>Tabla Vanet</title>
 </head>
 <body>
@@ -19,7 +22,7 @@
       include_once 'searchClient.php';
       include_once 'pagination.php';
       if(!isset($_POST['search'])||empty($_POST['search'])){
-      $pagination = new Pagination(15); }  ?>
+      $pagination = new Pagination(7); }  ?>
 
 <div id="containerDataTable">
 
@@ -40,7 +43,7 @@
    <div id="search">
     <div id="inputGroup">
     <form action="tablaclientes.php" method="POST" id="formSearch">
-    <i class="icon-search"></i><input type="text" name="search" placeholder="Buscar..." id="searchInput">
+    <i class="icon-search"></i><input type="text" name="search" autocomplete="off" placeholder="Buscar..." id="searchInput">
     </form>
      </div>
    </div>
@@ -59,6 +62,7 @@
             <th>Email</th>
         </tr>
     </thead>
+   <tbody>
      <?php 
      if(empty($_POST['search'])){
         $pagination->mostrarClient(); 
@@ -70,6 +74,7 @@
      $pagination->mostrarClient(); 
     }
      ?>
+     </tbody>
   </table>
 
   <div id="footerTools">
@@ -83,7 +88,7 @@
 
 </div>
 
-<script src="js/jquery-3.6.0.min.js"></script>
- <script src="js/table.js"></script>
+<script src="<?php echo constant('URL')?>js/jquery-3.6.0.min.js"></script>
+ <script src="<?php echo constant('URL')?>js/table.js"></script>
 </body>
 </html>

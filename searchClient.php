@@ -18,5 +18,4 @@ function mostrarBuscados(){
          include 'vistaClientes.php';
        }
 }
-
 ?>

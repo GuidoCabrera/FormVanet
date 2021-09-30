@@ -41,6 +41,5 @@ function getId(){
  function getMail(){
      echo $this->email;
  }
- 
 }
 ?>
