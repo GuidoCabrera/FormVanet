@@ -54,7 +54,7 @@ var clientes = [[],[]];
 
             $.ajax({
                type: 'POST',
-               url: 'http://192.168.2.103/PHP/FormVanet/deleteClient',
+               url: 'http://192.168.2.102/PHP/FormVanet/deleteClient',
                data: { tuArrJson: valParam},
                success: function(resp){
                   $("#respa").html(resp);
